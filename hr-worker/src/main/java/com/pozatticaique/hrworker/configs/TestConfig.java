@@ -20,6 +20,9 @@ public class TestConfig implements CommandLineRunner{
 	 
 	@Override
 	public void run(String... args) throws Exception {
+		
+		workerRepository.deleteAll();
+		
 		Worker w1 = new Worker(null,"Bob", 200.0);
 		Worker w2 = new Worker(null,"Maria", 300.0);
 		Worker w3 = new Worker(null,"Alex", 250.0);
