@@ -15,8 +15,7 @@ import com.pozatticaique.hrworker.repositories.WorkerRepository;
 public class TestConfig implements CommandLineRunner{
 	
 	@Autowired
-	WorkerRepository workerRepository;
-	
+	WorkerRepository workerRepository;	
 	 
 	@Override
 	public void run(String... args) throws Exception {
