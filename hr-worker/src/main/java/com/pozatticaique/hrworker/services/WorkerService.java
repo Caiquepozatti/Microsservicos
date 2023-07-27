@@ -3,13 +3,13 @@ package com.pozatticaique.hrworker.services;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.pozatticaique.hrworker.entities.Worker;
 import com.pozatticaique.hrworker.repositories.WorkerRepository;
+
+import jakarta.transaction.Transactional;
 
 @Service
 public class WorkerService implements Serializable{

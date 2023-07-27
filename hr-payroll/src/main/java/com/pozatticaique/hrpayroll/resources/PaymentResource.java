@@ -13,7 +13,6 @@ import com.pozatticaique.hrpayroll.services.PaymentService;
 @RestController
 @RequestMapping(value = "/payments")
 public class PaymentResource {
-
 	
 	@Autowired
 	private PaymentService service;

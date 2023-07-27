@@ -7,17 +7,19 @@ import com.pozatticaique.hrpayroll.entities.Payment;
 import com.pozatticaique.hrpayroll.entities.Worker;
 import com.pozatticaique.hrpayroll.feignclients.WorkerFeignClient;
 
+import jakarta.transaction.Transactional;
+
 @Service
-public class PaymentService {
-	 
+public class PaymentService {	
 	/*
 	//Variavel que foi criada dentro do Application.Properties
 	@Value("${hr-worker.host}")
 	private String workerHost;*/
-	
+			
 	@Autowired
 	private WorkerFeignClient workerFeignClient;
 	
+	@Transactional
 	public Payment getPayment(long workerId, int days) {
 		/*Map<String, String> uriVariables = new HashMap<>();
 		uriVariables.put("id", toString(workerId));
