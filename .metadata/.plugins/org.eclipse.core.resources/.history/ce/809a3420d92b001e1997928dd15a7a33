@@ -1,0 +1,24 @@
+package com.pozatticaique.hrpayroll.config;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
+import org.springframework.cloud.loadbalancer.core.ServiceInstanceListSupplier;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class MyLoadBalancerConfiguration {
+
+	@Value("${hr-worker.urls}") // Defina as URLs no arquivo application.properties
+    private String[] hrWorkerUrls;
+
+    @Bean
+    public LoadBalancerClient loadBalancerClient() {
+        return new CustomLoadBalancerClient(hrWorkerUrls);
+    }
+
+}

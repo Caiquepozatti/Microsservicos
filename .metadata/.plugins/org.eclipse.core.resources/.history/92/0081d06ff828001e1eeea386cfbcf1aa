@@ -1,0 +1,18 @@
+package com.pozatticaique.hrpayroll.resources;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.pozatticaique.hrpayroll.entities.Payment;
+
+@RestController
+@RequestMapping(value = "/payments")
+public class PaymentResource {
+	
+	@Autowired
+	private Payment service;
+	
+	
+
+}

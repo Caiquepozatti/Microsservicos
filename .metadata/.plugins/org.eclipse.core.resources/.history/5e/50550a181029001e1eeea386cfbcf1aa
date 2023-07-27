@@ -1,0 +1,39 @@
+package com.pozatticaique.hrpayroll.resources;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
+import org.springframework.cloud.loadbalancer.core.DiscoveryClientServiceInstanceListSupplier;
+import org.springframework.cloud.loadbalancer.core.ServiceInstanceListSupplier;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.pozatticaique.hrpayroll.entities.Payment;
+import com.pozatticaique.hrpayroll.services.PaymentService;
+
+@RestController
+@RequestMapping(value = "/payments")
+@LoadBalancerClient(name = "hr-worker")
+public class PaymentResource {
+	
+	@Autowired
+	private PaymentService service;
+	
+	@Autowired
+    private LoadBalancerClient loadBalancerClient;
+	
+	@GetMapping(value = "/{workerId}/days/{days}")
+	public ResponseEntity<Payment> getPayment(@PathVariable Long workerId,@PathVariable Integer days) {
+		 // Usando o LoadBalancerClient para obter a lista de instâncias do serviço "hr-worker"
+        ServiceInstanceListSupplier supplier = new DiscoveryClientServiceInstanceListSupplier(loadBalancerClient.getLoadBalancer("hr-worker"));
+        List<ServiceInstance> instances = supplier.get();
+		
+		Payment result = service.getPayment(workerId, days);
+		return ResponseEntity.ok().body(result);	
+	}
+}

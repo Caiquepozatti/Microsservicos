@@ -1,0 +1,32 @@
+package com.pozatticaique.hrpayroll.services;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+
+import com.pozatticaique.hrpayroll.entities.Payment;
+import com.pozatticaique.hrpayroll.entities.Worker;
+import com.pozatticaique.hrpayroll.feignclients.WorkerFeignClient;
+
+import jakarta.transaction.Transactional;
+
+@Service
+public class PaymentService {	
+	/*
+	//Variavel que foi criada dentro do Application.Properties
+	@Value("${hr-worker.host}")
+	private String workerHost;*/
+			
+	@Autowired
+	private WorkerFeignClient workerFeignClient;
+	
+	
+
+	private String toString(long workerId) {		
+		String longForString = String.valueOf(workerId);		
+		return longForString;
+	}
+}

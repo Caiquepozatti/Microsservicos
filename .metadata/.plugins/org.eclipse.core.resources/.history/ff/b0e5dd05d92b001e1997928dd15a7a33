@@ -1,0 +1,12 @@
+package com.pozatticaique.hrpayroll.config;
+
+import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class MyLoadBalancerConfiguration {
+
+    @LoadBalancerClient(name = "hr-worker", configuration = HrWorkerLoadBalancerConfiguration.class)
+    public class HrWorkerConfig {}
+
+}

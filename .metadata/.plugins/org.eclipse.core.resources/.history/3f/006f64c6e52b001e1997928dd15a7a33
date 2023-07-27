@@ -1,0 +1,20 @@
+package com.pozatticaique.hrpayroll.config;
+
+import org.springframework.cloud.client.DefaultServiceInstance;
+import org.springframework.cloud.loadbalancer.core.FixedServiceInstanceListSupplier;
+import org.springframework.cloud.loadbalancer.core.ServiceInstanceListSupplier;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class MyLoadBalancerConfiguration {
+
+    @Bean
+    public ServiceInstanceListSupplier serviceInstanceListSupplier() {
+        return new FixedServiceInstanceListSupplier("hr-worker",
+                new DefaultServiceInstance("instance1", "hr-worker", "localhost", 8001, false),
+                new DefaultServiceInstance("instance2", "hr-worker", "localhost", 8002, false));
+    }
+
+}
+

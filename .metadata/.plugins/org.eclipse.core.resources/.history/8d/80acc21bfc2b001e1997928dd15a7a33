@@ -1,0 +1,10 @@
+spring.application.name=hr-payroll
+server.port=8101
+
+
+spring.cloud.loadbalancer.client.listOfServers=localhost:8001,localhost:8002
+
+
+spring.cloud.loadbalancer.client.enabled=true
+
+feign.client.config.default.configurer=org.springframework.cloud.loadbalancer.config.LoadBalancerConfigurer

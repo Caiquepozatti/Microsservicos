@@ -1,0 +1,27 @@
+package com.pozatticaique.hrpayroll.config;
+
+import org.springframework.context.annotation.Bean;
+
+import feign.RequestInterceptor;
+import feign.RequestTemplate;
+
+public class YourFeignClientConfiguration {
+	
+	 @Bean
+	    public YourFeignClientInterceptor yourFeignClientInterceptor() {
+	        return new YourFeignClientInterceptor();
+	    }
+
+	    // Classe interna estática para o interceptor
+	    static class YourFeignClientInterceptor implements RequestInterceptor {
+	        private int instance = 0;
+
+	        @Override
+	        public void apply(RequestTemplate template) {
+	            // Balanceamento simples e alternado entre as portas 8001 e 8010
+	            String instanceUrl = "http://localhost:" + (8001 + (instance % 2) * 9);
+	            template.target(instanceUrl);
+	            instance++;
+	        }
+	    }  
+}

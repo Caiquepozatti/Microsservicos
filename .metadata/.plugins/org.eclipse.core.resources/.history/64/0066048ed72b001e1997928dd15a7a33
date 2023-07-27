@@ -1,0 +1,5 @@
+package com.pozatticaique.hrpayroll.config;
+
+public class MyLoadBalancerConfiguration {
+
+}

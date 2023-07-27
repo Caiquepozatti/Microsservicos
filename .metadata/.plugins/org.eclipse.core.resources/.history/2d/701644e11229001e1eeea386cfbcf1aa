@@ -1,0 +1,25 @@
+package com.pozatticaique.hrpayroll.services;
+
+import java.util.Random;
+
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.stereotype.Service;
+
+import com.pozatticaique.hrpayroll.entities.Payment;
+import com.pozatticaique.hrpayroll.entities.Worker;
+import com.pozatticaique.hrpayroll.feignclients.WorkerFeignClient;
+
+@Service
+@FeignClient(name = "hr-worker")
+public class PaymentService {
+	 
+	@LoadBalanced    
+    private WorkerFeignClient workerFeignClient;
+
+    public Payment getPayment(long workerId, int days) {
+        Random random = new Random();
+        Worker worker = workerFeignClient.findById(workerId).getBody();
+        return new Payment(worker.getName(), worker.getDailyIncome(), days);
+    }
+}

@@ -1,0 +1,30 @@
+package com.pozatticaique.hrpayroll.config;
+
+import java.io.IOException;
+import java.net.URI;
+import java.util.Arrays;
+
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerRequest;
+import org.springframework.cloud.client.loadbalancer.Request;
+import org.springframework.cloud.loadbalancer.core.ServiceInstanceListSupplier;
+
+public class CustomLoadBalancerClient implements LoadBalancerClient {
+
+    private final ServiceInstanceListSupplier serviceInstanceListSupplier;
+
+    public CustomLoadBalancerClient(String[] serviceUrls) {
+        this.serviceInstanceListSupplier = new CollectionServiceInstanceListSupplier(
+            Arrays.asList(serviceUrls), ServiceInstanceSupplier.DEFAULT_ORDER);
+    }
+
+    @Override
+    public ServiceInstance choose(String serviceId) {
+        return this.serviceInstanceListSupplier.get().stream()
+                .filter(instance -> instance.getServiceId().equals(serviceId))
+                .findFirst()
+                .orElse(null);
+    }
+
+}

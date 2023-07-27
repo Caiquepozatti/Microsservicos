@@ -1,0 +1,16 @@
+package com.pozatticaique.hrworker.configs;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.pozatticaique.hrworker.repositories.WorkerRepository;
+
+public class TestConfig {
+	
+	@Autowired
+	WorkerRepository workerRepository;
+	
+	 ('Bob', 200.0);
+	 ('Maria', 300.0);
+	 ('Alex', 250.0);
+
+}

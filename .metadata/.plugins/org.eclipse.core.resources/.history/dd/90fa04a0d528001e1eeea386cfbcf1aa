@@ -1,0 +1,19 @@
+package com.pozatticaique.hrworker.configs;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.pozatticaique.hrworker.entities.Worker;
+import com.pozatticaique.hrworker.repositories.WorkerRepository;
+
+public class TestConfig {
+	
+	@Autowired
+	WorkerRepository workerRepository;
+	
+	 Worker w1 = new Worker(null,"Bob", 200.0);
+	 Worker w2 = new Worker(null,"Maria", 300.0);
+	 Worker w3 = new Worker(null,"Alex", 250.0);
+	 
+	 workerRepository.saveAll(Arrays.asList(w1,w2,w3));
+
+}

@@ -1,0 +1,20 @@
+package com.pozatticaique.hrpayroll.feignclients;
+
+import feign.RequestInterceptor;
+import feign.RequestTemplate;
+
+public class YourFeignClientInterceptor {
+	
+	public class YourFeignClientInterceptor implements RequestInterceptor {
+
+	    private int instance = 0;
+
+	    @Override
+	    public void apply(RequestTemplate template) {
+	        // Balanceamento simples e alternado entre as portas 8001 e 8010
+	        String instanceUrl = "http://localhost:" + (8001 + (instance % 2) * 9);
+	        template.target(instanceUrl);
+	        instance++;
+	    }
+	}    
+}
