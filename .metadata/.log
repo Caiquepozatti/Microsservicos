@@ -5598,3 +5598,133 @@ java.lang.UnsupportedOperationException: No language server has registered to ha
 	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
 	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 14:46:15.060
+!MESSAGE Classpath changed for project: hr-eureka-server
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 14:46:22.505
+!MESSAGE executing callback sts4.classpath.lCvreVby FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-07-27 14:46:22.559
+!MESSAGE No language server has registered to handle command 'sts4.classpath.lCvreVby'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.lCvreVby'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 14:46:24.674
+!MESSAGE executing callback sts4.classpath.pBrsidzn FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-07-27 14:46:24.720
+!MESSAGE TimeoutException
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:31)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 14:46:25.151
+!MESSAGE Classpath changed for project: hr-eureka-server
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 14:46:25.163
+!MESSAGE Boot project ADDED: hr-eureka-server
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 14:46:25.230
+!MESSAGE executing callback sts4.classpath.lCvreVby FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-07-27 14:46:25.231
+!MESSAGE No language server has registered to handle command 'sts4.classpath.lCvreVby'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.lCvreVby'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 14:46:27.269
+!MESSAGE executing callback sts4.classpath.pBrsidzn FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-07-27 14:46:27.319
+!MESSAGE TimeoutException
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:31)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 14:46:29.157
+!MESSAGE Classpath changed for project: hr-eureka-server
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 14:46:29.466
+!MESSAGE executing callback sts4.classpath.lCvreVby FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-07-27 14:46:29.468
+!MESSAGE No language server has registered to handle command 'sts4.classpath.lCvreVby'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.lCvreVby'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 14:47:00.753
+!MESSAGE Classpath changed for project: hr-eureka-server
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 14:47:01.602
+!MESSAGE executing callback sts4.classpath.lCvreVby FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-07-27 14:47:01.605
+!MESSAGE No language server has registered to handle command 'sts4.classpath.lCvreVby'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.lCvreVby'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 14:47:03.760
+!MESSAGE executing callback sts4.classpath.pBrsidzn FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-07-27 14:47:03.773
+!MESSAGE TimeoutException
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:31)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 14:47:27.518
+!MESSAGE Classpath changed for project: hr-eureka-server
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 14:47:27.558
+!MESSAGE executing callback sts4.classpath.lCvreVby FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-07-27 14:47:27.559
+!MESSAGE No language server has registered to handle command 'sts4.classpath.lCvreVby'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.lCvreVby'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
