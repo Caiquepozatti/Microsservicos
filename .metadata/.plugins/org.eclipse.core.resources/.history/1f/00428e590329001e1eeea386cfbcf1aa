@@ -1,5 +1,0 @@
-package com.pozatticaique.hrpayroll.feignclients;
-
-public interface WorkerFiengClient {
-
-}
